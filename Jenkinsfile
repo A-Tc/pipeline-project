@@ -1,11 +1,16 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('buld') {
+    stages {
+        stage('run') {
             steps {
-                echo "Welcome to Jenkins Environment!"
-                sh 'echo using shell within Jenkins file'
-                echo 'not using shell in Jenkins file'
+                echo "Welcome to Jenkins World"
+                sh 'python --version'
+            }
+        }
+        stage('version check') {
+            steps {
+                echo "Welcome to Jenkins World"
+                sh 'python pipeline.py'
             }
         }
             
